@@ -46,3 +46,17 @@ mysql> select * from addressBook;
 | aman      | raj      | india   | patna     | bihar         | 821305 | 9955886677  | amanraj@gmail.com |
 +-----------+----------+---------+-----------+---------------+--------+-------------+-------------------+
 3 rows in set (0.01 sec)
+mysql> update addressBook set address = 'germany' where firstName = 'aman';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from addressBook;
++-----------+----------+---------+-----------+---------------+--------+-------------+-------------------+
+| firstName | lastName | address | city      | state         | zip    | phoneNumber | email             |
++-----------+----------+---------+-----------+---------------+--------+-------------+-------------------+
+| atul      | raj      | india   | bhopal    | madhyaPradesh | 821308 | 9955667788  | atulraj@gmail.com |
+| shristy   | singh    | india   | bangalore | karnataka     | 821897 | 9955882211  | shristy@gmail.com |
+| aman      | raj      | germany | patna     | bihar         | 821305 | 9955886677  | amanraj@gmail.com |
++-----------+----------+---------+-----------+---------------+--------+-------------+-------------------+
+3 rows in set (0.00 sec)
+
