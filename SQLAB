@@ -30,3 +30,19 @@ mysql> create table addressBook(
     -> primary key(phoneNumber));
 Query OK, 0 rows affected (0.01 sec)
 
+mysql> insert into addressBook(firstName,lastName,address,city,state,zip,phoneNumber,email) 
+    -> values('aman','raj','india', 'patna','bihar','821305','9955886677','amanraj@gmail.com'),
+    -> ('atul','raj','india', 'bhopal','madhyaPradesh','821308','9955667788','atulraj@gmail.com'),
+    -> ('shristy','singh','india', 'bangalore','karnataka','821897','9955882211','shristy@gmail.com');
+Query OK, 3 rows affected (0.02 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from addressBook;
++-----------+----------+---------+-----------+---------------+--------+-------------+-------------------+
+| firstName | lastName | address | city      | state         | zip    | phoneNumber | email             |
++-----------+----------+---------+-----------+---------------+--------+-------------+-------------------+
+| atul      | raj      | india   | bhopal    | madhyaPradesh | 821308 | 9955667788  | atulraj@gmail.com |
+| shristy   | singh    | india   | bangalore | karnataka     | 821897 | 9955882211  | shristy@gmail.com |
+| aman      | raj      | india   | patna     | bihar         | 821305 | 9955886677  | amanraj@gmail.com |
++-----------+----------+---------+-----------+---------------+--------+-------------+-------------------+
+3 rows in set (0.01 sec)
