@@ -1,0 +1,20 @@
+mysql> create database Address_book_service;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> show databases;
++----------------------+
+| Database             |
++----------------------+
+| Address_book_service |
+| information_schema   |
+| mysql                |
+| naincy_schema        |
+| payroll_service      |
+| performance_schema   |
+| pet_store            |
+| sys                  |
++----------------------+
+8 rows in set (0.03 sec)
+
+mysql> use Address_book_service;
+Database changed
