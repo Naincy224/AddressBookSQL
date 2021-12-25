@@ -18,3 +18,15 @@ mysql> show databases;
 
 mysql> use Address_book_service;
 Database changed
+mysql> create table addressBook(
+    -> firstName varchar(20) not null,
+    -> lastName varchar(20) not null,
+    -> address varchar(100) not null,
+    -> city varchar(25) not null,
+    -> state varchar(20) not null,
+    -> zip varchar(20) not null,
+    -> phoneNumber varchar(20) not null,
+    -> email varchar(100) not null,
+    -> primary key(phoneNumber));
+Query OK, 0 rows affected (0.01 sec)
+
