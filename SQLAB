@@ -59,4 +59,29 @@ mysql> select * from addressBook;
 | aman      | raj      | germany | patna     | bihar         | 821305 | 9955886677  | amanraj@gmail.com |
 +-----------+----------+---------+-----------+---------------+--------+-------------+-------------------+
 3 rows in set (0.00 sec)
+mysql> delete from addressBook where firstName = 'shristy';
+Query OK, 1 row affected (0.01 sec)
 
+mysql> select * from addressBook;
++-----------+----------+---------+--------+---------------+--------+-------------+-------------------+
+| firstName | lastName | address | city   | state         | zip    | phoneNumber | email             |
++-----------+----------+---------+--------+---------------+--------+-------------+-------------------+
+| atul      | raj      | india   | bhopal | madhyaPradesh | 821308 | 9955667788  | atulraj@gmail.com |
+| aman      | raj      | germany | patna  | bihar         | 821305 | 9955886677  | amanraj@gmail.com |
++-----------+----------+---------+--------+---------------+--------+-------------+-------------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from addressBook where city = 'bhopal' or state = 'madhyaPradesh';
++-----------+----------+---------+--------+---------------+--------+-------------+-------------------+
+| firstName | lastName | address | city   | state         | zip    | phoneNumber | email             |
++-----------+----------+---------+--------+---------------+--------+-------------+-------------------+
+| atul      | raj      | india   | bhopal | madhyaPradesh | 821308 | 9955667788  | atulraj@gmail.com |
++-----------+----------+---------+--------+---------------+--------+-------------+-------------------+
+1 row in set (0.00 sec)
+mysql> select city, state ,count(*) from addressbook group by city;
++-----------+------------+----------+
+| city      | state      | count(*) |
++-----------+------------+----------+
+| bhopal.   |madhyapradesh|       1 |
+| patna     | bihar      |        1 |
++-----------+------------+----------+
